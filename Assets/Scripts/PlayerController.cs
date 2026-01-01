@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float longitudRayCast = -1f; 
     [SerializeField] private float multiplicadorCaida = 3f; // Cuanto más alto, más rápido cae
     [SerializeField] private LayerMask capaSuelo;
+    [SerializeField] private LayerMask enemies;
     private bool enSuelo;
 
     [SerializeField] private float jumpBufferTime = 0.1f; 
@@ -70,5 +72,20 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(positionInit.position, positionInit.position + Vector3.left * longitudRayCast);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("destroyer"))
+        {
+            // Destruye el bloque
+            Destroy(gameObject);
+            ReloadScene();
+        }
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
