@@ -4,7 +4,7 @@ public class CamaraSigue : MonoBehaviour
 {
     [SerializeField] private Transform objetivo; // Tu Player
     [SerializeField] private float suavizado = 0.125f; // Cuanto más bajo, más elástica la cámara    
-    [SerializeField] private Vector3 desfasePersonalizado = new Vector3(0, 2, -10);
+    [SerializeField] private Vector3 desfasePersonalizado = new Vector3(0, 1, -10);
 
     void LateUpdate()
     {
