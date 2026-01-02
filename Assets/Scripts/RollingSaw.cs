@@ -15,6 +15,6 @@ public class MovimientoSimple : MonoBehaviour
         // Al usar timeSinceLevelLoad, el movimiento siempre empieza desde el "segundo 0"
         float movimiento = Mathf.PingPong(Time.timeSinceLevelLoad * velocidad, distancia);
         transform.position = new Vector3(posicionInicial.x + movimiento, posicionInicial.y, posicionInicial.z);
-        transform.Rotate(Vector3.forward * 300F* Time.fixedDeltaTime);
+        transform.Rotate(Vector3.forward * 900F* Time.fixedDeltaTime);
     }
 }
