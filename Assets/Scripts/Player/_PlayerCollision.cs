@@ -1,21 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
-{    
-
+public class _PlayerCollision : MonoBehaviour
+{
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("destroyer"))
         {
-            // Destruye el bloque
             Destroy(gameObject);
-            ReloadScene();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-    }
-
-    void ReloadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
