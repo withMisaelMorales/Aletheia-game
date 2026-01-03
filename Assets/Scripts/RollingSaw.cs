@@ -11,7 +11,7 @@ public class MovimientoSimple : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         posicionInicial = transform.position;
-    }
+    }    
 
     // void Update()
     // {
