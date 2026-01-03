@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Laser2D : MonoBehaviour
 {
@@ -52,5 +53,14 @@ public class Laser2D : MonoBehaviour
         // Rotación
         float angle = Mathf.Atan2(endPos.y - startPos.y, endPos.x - startPos.x) * Mathf.Rad2Deg;
         laserCollider.transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
+    void OnTriggerEnter2D (Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
