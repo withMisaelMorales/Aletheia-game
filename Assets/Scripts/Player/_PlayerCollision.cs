@@ -9,6 +9,15 @@ public class _PlayerCollision : MonoBehaviour
         {
             Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        }        
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("destroyer"))
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }        
     }
 }

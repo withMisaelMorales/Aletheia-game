@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8966184967571555883}
   - component: {fileID: 1268260675646777105}
   - component: {fileID: 606196345097860156}
+  - component: {fileID: -4382455158424303213}
   m_Layer: 3
   m_Name: Circle
   m_TagString: destroyer
@@ -184,3 +185,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cda63a8f7525fd45b6d07760a7f0c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_DespawnerObject
+--- !u!114 &-4382455158424303213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8708516107483125978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cffc82b1a9a1994f87ca22f55509a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_defaultPrefabSaw
+  rotationSpeed: 100
+  typeRigiBody: 0

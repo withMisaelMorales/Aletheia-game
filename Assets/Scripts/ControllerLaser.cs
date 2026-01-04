@@ -19,12 +19,10 @@ public class Laser2D : MonoBehaviour
     {        
         lineRenderer.SetPosition(0, firePoint.position);
         
-        // 1. Declaramos la variable vacía
         Vector3 finalPoint;
 
         RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, distance, groundLayer);
 
-        // 2. Asignamos el valor a finalPoint dependiendo del impacto
         if (hit.collider != null)
         {
             finalPoint = hit.point;
@@ -34,10 +32,8 @@ public class Laser2D : MonoBehaviour
             finalPoint = firePoint.position + firePoint.right * distance;
         }
         
-        // 3. ACTUALIZAMOS EL LÁSER (Solo una vez)
         lineRenderer.SetPosition(1, finalPoint);       
         
-        // 4. ACTUALIZAMOS EL COLLIDER
         UpdateLaserCollider(firePoint.position, finalPoint);        
     }
 

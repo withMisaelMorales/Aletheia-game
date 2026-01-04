@@ -4,10 +4,12 @@ public class _DespawnerObject : MonoBehaviour
 {
     private float margin = 0.2f; 
     private Camera mainCam;
+    private Rigidbody2D rb;
 
     void Start()
     {
         mainCam = Camera.main;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -17,6 +19,7 @@ public class _DespawnerObject : MonoBehaviour
 
     void CheckIfOffScreen()
     {
+        if (rb != null && rb.bodyType == RigidbodyType2D.Kinematic) return;
         // Convertimos la posición a coordenadas de cámara (0 a 1)
         Vector3 screenPoint = mainCam.WorldToViewportPoint(transform.position);
 
