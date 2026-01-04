@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Laser2D : MonoBehaviour
 {
+    public enum LaserDirection { Derecha, Izquierda, Arriba, Abajo }
+    [SerializeField] private LaserDirection directionLaser = LaserDirection.Derecha;
     public LineRenderer lineRenderer;
     public Transform firePoint;
     public float distance = 50f;
@@ -17,11 +19,21 @@ public class Laser2D : MonoBehaviour
 
     void Update()
     {        
+
+        Vector2 vectorDirection = Vector2.right;
+        switch(directionLaser)
+        {
+            case LaserDirection.Derecha: vectorDirection = firePoint.right; break;
+            case LaserDirection.Arriba: vectorDirection = firePoint.up; break;
+            case LaserDirection.Izquierda: vectorDirection = -firePoint.right; break;
+            case LaserDirection.Abajo: vectorDirection = -firePoint.up; break;
+        }
+
         lineRenderer.SetPosition(0, firePoint.position);
         
         Vector3 finalPoint;
 
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, firePoint.right, distance, groundLayer);
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, vectorDirection, distance, groundLayer);
 
         if (hit.collider != null)
         {
@@ -29,7 +41,7 @@ public class Laser2D : MonoBehaviour
         }
         else
         {
-            finalPoint = firePoint.position + firePoint.right * distance;
+            finalPoint = firePoint.position + (Vector3)vectorDirection * distance;
         }
         
         lineRenderer.SetPosition(1, finalPoint);       
