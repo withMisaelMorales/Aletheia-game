@@ -21,3 +21,27 @@ despawner de Objetos:   _despawnerObject
 ## plataforma "Lava"
 
 
+
+
+sprites
+
+animacion
+PERSONAJE
+    quieto
+    saltar
+    morir
+    caminar
+BLOQUE
+    bloque movil
+
+sprites
+    bloque estatico    
+    ✅cierra
+    ✅laser
+    pinchos
+    paredes
+    suelo
+    fondo
+
+
+
