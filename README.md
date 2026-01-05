@@ -37,11 +37,15 @@ BLOQUE
 sprites
     bloque estatico    
     ✅cierra
-    ✅laser
+    l✅aser
     pinchos
     paredes
     suelo
     fondo
 
 
+
+salta 4.5 unidades
+salta desliza = 8 unidades
+salta maximo = 4 unidades
 
