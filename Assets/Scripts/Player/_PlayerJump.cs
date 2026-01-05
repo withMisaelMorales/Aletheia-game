@@ -64,10 +64,10 @@ public class _PlayerJump : MonoBehaviour
         }
     }
 
-    // visualizar el raycast de salto (no necesario)
-    // void OnDrawGizmos()
-    // {
-    //     Gizmos.color = Color.red;
-    //     Gizmos.DrawLine(groundPosition.position, groundPosition.position + Vector3.left * raycastLength);
-    // }
+    //visualizar el raycast de salto (no necesario)
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(groundPosition.position, groundPosition.position + Vector3.left * raycastLength);
+    }
 }

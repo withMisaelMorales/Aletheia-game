@@ -33,21 +33,6 @@ public class _MovementXY : MonoBehaviour
         {
             transform.position = new Vector3(startPos.x, startPos.y + movement, startPos.z);
         }
-    }
+    }  
 }
 
-    // void Update()
-    // {
-    //     // Al usar timeSinceLevelLoad, el movimiento siempre empieza desde el "segundo 0"
-    //     float movimiento = Mathf.PingPong(Time.timeSinceLevelLoad * velocidad, distancia);
-    //     transform.position = new Vector3(posicionInicial.x + movimiento, posicionInicial.y, posicionInicial.z);
-    //     transform.Rotate(Vector3.forward * 900F* Time.fixedDeltaTime);
-    // }
-    // void FixedUpdate()
-    // {
-    //     float movimiento = Mathf.PingPong(Time.timeSinceLevelLoad * velocidad, distancia);
-    //     Vector2 nuevaPos = new Vector2(posicionInicial.x + movimiento, posicionInicial.y);
-        
-    //     // Movemos el Rigidbody
-    //     rb.MovePosition(nuevaPos);
-    // }    
