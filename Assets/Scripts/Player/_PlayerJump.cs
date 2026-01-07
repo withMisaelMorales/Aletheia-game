@@ -13,7 +13,7 @@ public class _PlayerJump : MonoBehaviour
     [SerializeField] private float raycastLength = 1.05f; 
     // Identificar que elementos tienen el layer de suelo
     [SerializeField] private LayerMask groundLayer;
-    private bool onGround;
+    public bool onGround;
     
 
     // Controlador del Jump Buffer

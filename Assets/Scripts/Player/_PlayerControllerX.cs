@@ -3,6 +3,7 @@ using UnityEngine;
 public class _PlayerControllerX : MonoBehaviour
 {
     private const string STRING_VELOCIDAD_HORIZONTAL = "velocidadX";
+    private _PlayerJump jumpScript;
     [Header("Configuración de Movimiento X")]
     [SerializeField] private float speedPlayer = 10f;
     [SerializeField] private Animator animator;
@@ -14,6 +15,7 @@ public class _PlayerControllerX : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        jumpScript = GetComponent<_PlayerJump>();
     }
 
     void Update()
@@ -31,7 +33,7 @@ public class _PlayerControllerX : MonoBehaviour
 
     void controlAnimator() {
         animator.SetFloat(STRING_VELOCIDAD_HORIZONTAL, Mathf.Abs(rb.linearVelocity.x));
-
+        animator.SetBool("suelo", jumpScript.onGround);
     }
 void Flip(float horizontal)
     {
