@@ -2696,6 +2696,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3263217318503834853, guid: 9dd7214e500b0044f8f86f89ac155dad, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1872821425}
+    - target: {fileID: 3263217318503834853, guid: 9dd7214e500b0044f8f86f89ac155dad, type: 3}
+      propertyPath: playerVisual
+      value: 
+      objectReference: {fileID: 1872821421}
     - target: {fileID: 4561393582420299254, guid: 9dd7214e500b0044f8f86f89ac155dad, type: 3}
       propertyPath: m_Offset.x
       value: 0
@@ -4478,7 +4486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7168597877397983143, guid: 9dd7214e500b0044f8f86f89ac155dad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 69.7
+      value: 68.08
       objectReference: {fileID: 0}
     - target: {fileID: 7168597877397983143, guid: 9dd7214e500b0044f8f86f89ac155dad, type: 3}
       propertyPath: m_LocalPosition.z
